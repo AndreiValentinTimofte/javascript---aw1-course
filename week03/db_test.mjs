@@ -5,7 +5,7 @@ if (err)  throw err;
 });
 
 let sql = "SELECT * FROM answer"
-let result = []
+// let result = []
 
 // callback: è asincrono. Passa alla successiva operazione. Tutte le operazioni di un callback asincrona che hanno  
 // delle dipendenza al di fuori può rompere l'integrità del codice
