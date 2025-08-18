@@ -84,7 +84,6 @@ function QuestionList() {
             const sql = `SELECT question.*, user.email FROM
                         question JOIN user ON question.authorId = user.id 
                         WHERE question.id = ?`;
-
             const params = [id];
             db.get(sql, params, (err, row) => {
                 if (err)
@@ -104,7 +103,6 @@ function QuestionList() {
     this.addQuestion = (question) => {
         return new Promise((resolve, reject) => {
             const sql = "INSERT INTO question(text, authorId, date) VALUES(?, ?, ?)"
-
             db.run(sql, [question.text, question.userId, question.date.toISOString()], function(err) {
                 if (err)
                     reject(err);
